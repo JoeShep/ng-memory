@@ -55,16 +55,13 @@ angular.module('MemoryGame')
 
   // configure views; whenAuthenticated adds a resolve method to ensure users authenticate
   // before trying to access that route
-  .config(['$routeProvider', function($routeProvider) {
+  .config(['$routeProvider', '$sceDelegateProvider',function($routeProvider, $sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist(['**']);
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-
-      .when('/chat', {
-        templateUrl: 'views/chat.html',
-        controller: 'ChatCtrl'
+        controller: 'MainCtrl as MainCtrl'
       })
       .when('/login', {
         templateUrl: 'views/login.html',
@@ -74,6 +71,11 @@ angular.module('MemoryGame')
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'
       })
+      // Remember to add 'whenAuthenticated'
+      // .when('/game-board', {
+      //   templateUrl: 'views/game-board.html',
+      //   controller: 'GameCtrl'
+      // })
       .otherwise({redirectTo: '/'});
   }])
 

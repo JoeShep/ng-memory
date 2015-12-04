@@ -17,5 +17,6 @@ angular.module('MemoryGame', [
     'ngTouch',
     'firebase',
     'firebase.ref',
-    'firebase.auth'
+    'firebase.auth',
+    'Audio'
   ]);
