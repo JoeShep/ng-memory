@@ -72,10 +72,10 @@ angular.module('MemoryGame')
         controller: 'AccountCtrl'
       })
       // Remember to add 'whenAuthenticated'
-      // .when('/game-board', {
-      //   templateUrl: 'views/game-board.html',
-      //   controller: 'GameCtrl'
-      // })
+      .when('/game-board', {
+        templateUrl: 'views/game-board.html',
+        controller: 'GameCtrl as GameCtrl'
+      })
       .otherwise({redirectTo: '/'});
   }])
 

@@ -12,12 +12,12 @@ angular.module('Audio', [
   ])
   .controller('AudioCtrl',
     [
-      "$scope",
-      "$firebaseArray",
-      "Ref",
+      '$scope',
+      '$firebaseArray',
+      'Ref',
       function ($scope, $soundsArray, Ref) {
-        var soundsRef = Ref.child("sounds")
-        $scope.sounds_list = $soundsArray(soundsRef);
+        var soundsRef = Ref.child('sounds');
+        $scope.soundsList = $soundsArray(soundsRef);
       }
     ]
   );

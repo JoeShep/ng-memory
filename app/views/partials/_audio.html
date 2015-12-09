@@ -1,3 +1,3 @@
-<div ng-controller="AudioCtrl" ng-repeat="sound in sounds_list">
-  <audio class="{{sound.id}}" src="{{sound.audioUrl}}" preload='auto'></audio>
+<div ng-controller="AudioCtrl">
+  <audio ng-repeat="sound in sounds_list" class="{{sound.id}}" src="{{sound.audioUrl}}" preload='auto'></audio>
 </div>
