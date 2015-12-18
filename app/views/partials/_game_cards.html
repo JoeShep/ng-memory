@@ -1,5 +1,6 @@
-<div class="tile tileStyle1 flipbox-front" ng-click="GameCtrl.flipCard(card)">
-
-  <img class="pic img-responsive" ng-class="{'invisible': GameCtrl.isflipped(card)}" data-id="{{card.id}}" src="{{card.imgUrl}}">
-
-</div>
+<section class="tile">
+  <div class="card" id="{{card.id}}">
+    <figure class="front"></figure>
+    <figure class="back pic img-responsive" style="background:url({{card.imgUrl}}) left center/100% no-repeat"></figure>
+  </div>
+</section>
