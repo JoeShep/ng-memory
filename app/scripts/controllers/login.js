@@ -1,7 +1,7 @@
 'use strict';
 /**
  * @ngdoc function
- * @name MemoryGame.controller:LoginCtrl
+ * @name MemoryGame.controller:LoginCtr
  * @description
  * # LoginCtrl
  * Manages authentication to any active providers.
